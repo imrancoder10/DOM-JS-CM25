@@ -9,6 +9,12 @@
         li{
             color:blue;
         }
+        #fruits{
+            color:green;
+        }
+        .important-palces{
+            color: brown;
+        }
     </style>
 </head>
 <body>
@@ -16,17 +22,32 @@
         <h1>Welcome to my DOM  </h1>
     </header>
     <main>
-        <h1>My awesome DOM Project</h1>
+        <section>
+            <h1>My awesome DOM Project</h1>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScirpt</li>
         </ul>
-        <ul>
-            <li>Banana</li>
-            <li>Apple</li>
-            <li>Carrot</li>
-        </ul>
+        </section>
+        <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi assumenda modi eveniet iusto, fugiat aperiam rerum id atque perspiciatis nemo ut corporis, illum nostrum! Suscipit deleniti voluptatibus totam enim veniam.</section>
+        <section>
+            <h1 id="fruits">Fruits I like</h1>
+            <ul>
+                <li>Banana</li>
+                <li>Apple</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places">Places I like to visit</h1>
+            <ul>
+                <li class="important-palces">Sundorbon</li>
+                <li class="important-palces">Paribon</li>
+                <li class="important-palces">Darabon</li>
+                <li>HajiBan</li>
+            </ul>
+        </section>
     </main>
 
 
@@ -36,12 +57,19 @@
        const liCollection = document.getElementsByTagName('li');
     //    console.log(liCollection);
     for(const li of liCollection){
-        console.log(li.innerText);
+        // console.log(li.innerText);
     }
     const allHeading = document.getElementsByTagName('h1');
     // console.log(allHeading);
     for(const h1 of allHeading){
-        console.log(h1.innerText);
+        // console.log(h1.innerText);
+    }
+    const fruitsTitle = document.getElementById('fruits');
+    fruitsTitle.innerText = 'Change the Title.';
+    const places = document.getElementsByClassName('important-palces');
+    // console.log(places);
+    for(const place of places){
+        console.log(place.innerText);
     }
     </script>
     
