@@ -6,8 +6,8 @@
     <title>DOM JS</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        li{
-            color:blue;
+       .fruits-container li{
+            color:rgb(255, 115, 0);
         }
         #fruits{
             color:green;
@@ -31,7 +31,7 @@
         </ul>
         </section>
         <section>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi assumenda modi eveniet iusto, fugiat aperiam rerum id atque perspiciatis nemo ut corporis, illum nostrum! Suscipit deleniti voluptatibus totam enim veniam.</section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits">Fruits I like</h1>
             <ul>
                 <li>Banana</li>
@@ -59,18 +59,33 @@
     for(const li of liCollection){
         // console.log(li.innerText);
     }
+    // ============================================================
     const allHeading = document.getElementsByTagName('h1');
     // console.log(allHeading);
     for(const h1 of allHeading){
         // console.log(h1.innerText);
     }
+
+
+    // ==========================================================
     const fruitsTitle = document.getElementById('fruits');
     fruitsTitle.innerText = 'Change the Title.';
+
+    // ========================================================
     const places = document.getElementsByClassName('important-palces');
     // console.log(places);
     for(const place of places){
-        console.log(place.innerText);
+        // console.log(place.innerText);
     }
+
+    // =========================================================
+    // querySelectorAll
+    const someLi = document.querySelectorAll('.fruits-container li');
+    console.log(someLi);
+    for(const li of someLi){
+        console.log(li.innerText);
+    }
+
     </script>
     
 </body>
